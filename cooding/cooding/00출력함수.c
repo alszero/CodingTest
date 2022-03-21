@@ -11,7 +11,11 @@ int main(void)
 	char mjyeol[100] = "Hello World";
 	printf("정수 %d, 문자 %c, 더블 %lf, 플롯 %f\n"
 		, jungsu, munja, sosu, sosu1);
-	printf("%c", mjyeol[0]);
+	for (int i = 0; i < 12; i++) 
+	{
+		printf("%c", mjyeol[i]);
+	}
+	/*printf("%c", mjyeol[0]);
 	printf("%c", mjyeol[1]);
 	printf("%c", mjyeol[2]);
 	printf("%c", mjyeol[3]);
@@ -22,7 +26,7 @@ int main(void)
 	printf("%c", mjyeol[8]);
 	printf("%c", mjyeol[9]);
 	printf("%c", mjyeol[10]);
-	printf("%c", mjyeol[11]);
+	printf("%c", mjyeol[11]);*/
 	//printf("%s\n", mjyeol);
 	// mjyeol를 %c로 찍어보자
 	//printf("%c\n", mjyeol);
