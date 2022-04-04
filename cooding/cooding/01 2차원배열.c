@@ -6,8 +6,9 @@ int main(void) {
 	
 	// 반복횟수를 12번 고정(유연하지 못한 코드)
 	// sizeof(arr) 배열 arr의 크기: 4*12 = 48
+	// sizeof(arr[0]) 공간 하나의 크기: 4
 	// sizeof(int) int형 변수의 크기: 4
-	for (int i = 0; i < sizeof(arr)/sizeof(int); i++)
+	for (int i = 0; i < sizeof(arr)/sizeof(arr[0]); i++)
 	{
 		printf("%d ", arr[i]);
 	}
