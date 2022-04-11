@@ -21,13 +21,12 @@ int main(void) {
 		}
 	}*/
 	for (int i = 0; i < 3; i++) {
-		printf("%d", arr[i][0]);
-		printf("%d", arr[i][1]);
-		printf("%d", arr[i][2]);
-		printf("%d", arr[i][3]);
+		for (int j = 0; j < 4; j++) {
+			printf("%d", arr[i][j]);
+		}
 		printf("\n");
 	}
-	printf("%d", arr[0][0]);
+	/*printf("%d", arr[0][0]);
 	printf("%d", arr[0][1]);
 	printf("%d", arr[0][2]);
 	printf("%d", arr[0][3]);
@@ -41,6 +40,6 @@ int main(void) {
 	printf("%d", arr[2][1]);
 	printf("%d", arr[2][2]);
 	printf("%d", arr[2][3]);
-	printf("\n");
+	printf("\n");*/
 	
 }
