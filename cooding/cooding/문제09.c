@@ -10,11 +10,15 @@
 // shirt_size[4]: "XL" 사이즈 신청자의 수
 // shirt_size[5]: "XXL" 사이즈 신청자의 수
 
+// 동적할당 mallo(함수)이용
+
 int* solution(char* shirt_size[], int shirt_size_len) {
-	int arr[6] = { 0,0,0,0,0,0 };
-	int* answer = arr;
-
-
+	// 동적할당
+	int* answer = malloc(6 * sizeof(int));
+	for (int i = 0; i < 6; i++) {
+		// 배열 초기화
+		answer[i] = 0;
+	}
 	// shirt_size에 있는 모든 원소를 뒤져서 counting
 	for (int i = 0; i < shirt_size_len; i++) {
 		// shirt_size[i]가 "XS"면 anser[0]++
