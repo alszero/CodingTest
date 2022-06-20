@@ -13,17 +13,23 @@
 int* solution(char* shirt_size[], int shirt_size_len) {
 	int arr[6] = { 0,0,0,0,0,0 };
 	int* answer = arr;
-	// 여기에 코드를 작성해주세요.
+
+
 	// shirt_size에 있는 모든 원소를 뒤져서 counting
 	for (int i = 0; i < shirt_size_len; i++) {
 		// shirt_size[i]가 "XS"면 anser[0]++
 		if (strcmp(shirt_size[i],"XS")==0)
 			answer[0]++;
-		// shirt_size[i]가 "S"면 anser[1]++
-		// shirt_size[i]가 "M"면 anser[2]++
-		// shirt_size[i]가 "L"면 anser[3]++
-		// shirt_size[i]가 "XL"면 anser[4]++
-		// shirt_size[i]가 "XXL"면 anser[5]++
+		else if (strcmp(shirt_size[i], "S") == 0)
+			answer[1]++;
+		else if (strcmp(shirt_size[i], "M") == 0)
+			answer[2]++;
+		else if (strcmp(shirt_size[i], "L") == 0)
+			answer[3]++;
+		else if (strcmp(shirt_size[i], "XL") == 0)
+			answer[4]++;
+		else if (strcmp(shirt_size[i], "XXL") == 0)
+			answer[5]++;
 	}
 	return answer;
 }
