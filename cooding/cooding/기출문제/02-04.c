@@ -7,7 +7,13 @@
 // 5개이상의 문자열만 걸러서 넣는다
 char* solution(char* words[], int words_len) {
     //단어의 갯수 최대 100개, 한단어당 10개 + '/0'공간 1개
-    char answer[1001] = "";
+    //char answer[1001] = "";
+    // 메모리공간 1001개로 동적할당
+    char* answer = malloc(1001 * sizeof(char));
+
+    // 모든 공간을 0으로 초기화
+    for (int i = 0; i < 1001; i++)
+        answer[i] = 0;
     // words[0]이 5글자 이상이면
         // answer에 words[0] 추가
     for(int i=0; i<words_len; i++)
@@ -16,7 +22,7 @@ char* solution(char* words[], int words_len) {
 
     // answer에 아무 글자도 없을 때, answer는 "empty"
     if (strlen(answer) == 0)
-        strcat(answer, "empty");
+        strcat(answer, "empty");   // 빈 문자열 answer에 "empty"추가
     
 
     return answer;
