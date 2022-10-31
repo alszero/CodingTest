@@ -6,21 +6,18 @@
 // words 그냥 문자열이 들어가 있는 것
 // 5개이상의 문자열만 걸러서 넣는다
 char* solution(char* words[], int words_len) {
-    char* answer = "";
+    //단어의 갯수 최대 100개, 한단어당 10개 + '/0'공간 1개
+    char answer[1001] = "";
     // words[0]이 5글자 이상이면
         // answer에 words[0] 추가
     for(int i=0; i<words_len; i++)
-    if (strlen(words[i]) >= 5)
-        strcat(answer, words[i]);
+        if(strlen(words[i]) >= 5)
+            strcat(answer, words[i]);
+
+    // answer에 아무 글자도 없을 때, answer는 "empty"
+    if (strlen(answer) == 0)
+        strcat(answer, "empty");
     
-    // words[1]이 5글자 이상이면
-        // answer에 words[1] 추가
-    // words[2]이 5글자 이상이면
-        // answer에 words[2] 추가
-    // words[3]이 5글자 이상이면
-        // answer에 words[3] 추가
-    // words[4]이 5글자 이상이면
-        // answer에 words[4] 추가
 
     return answer;
 }
