@@ -4,6 +4,7 @@
 
 int solution(char* words[], int words_len, char* word) {
     int count = 0;
+    // words[0] : "CODE", words[1] : "COED", words[2] : "CDEO"
 
     for (int i = 0; i < words_len; i++)
     {
@@ -14,18 +15,8 @@ int solution(char* words[], int words_len, char* word) {
                 count++;
             }
         }
-        if (word[0] != words[i][0])
-            count++;
-        if (word[1] != words[i][1])
-            count++;
-        if (word[2] != words[i][2])
-            count++;
-        if (word[3] != words[i][3])
-            count++;
     }
-    
 
-   
     return count;
 }
 
